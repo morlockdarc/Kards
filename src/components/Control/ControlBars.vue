@@ -21,9 +21,12 @@
     </el-row>
 
     <el-row>
-      <el-col :span="12" v-if="bars.type=='simple'">
+      <el-col :span="20" v-if="bars.type=='simple'">
         <el-form-item label="Level" label-width="90px">
           <el-radio-group v-model="bars.level" size="mini">
+            <el-radio-button label="20" />
+            <el-radio-button label="40" />
+            <el-radio-button label="60" />
             <el-radio-button label="75" />
             <el-radio-button label="100" />
             <el-radio-button label="109" />

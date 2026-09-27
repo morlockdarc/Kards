@@ -7,33 +7,17 @@
     <el-row style="padding-bottom: 20px;">
       <el-col :span="24">
         <h2>Better test cards for the AV Professional.</h2>
-        Software made in the UK by those who use it.<br />
+        Custom version for Televic by Pepijn Callaerts<br />
         <br />
-        We're proud to release Kards as free and open source software.<br />
-        To help us keep it this way, and to support more features and platforms, we'd<br />
-        really appreciate any donation you're able to give.<br />
+        This is a custom version of Kards, tailored for Televic's needs.<br />
+        Please contact <a href="mailto:p.callaerts@televic.com">Pepijn Callaerts</a> for any questions or support<br />
+        regarding this version, or if any additional features are required. 
         <br />
-        <el-button @click="openDonate" type="primary">
-          <i class="fa-solid fa-hand-holding-heart"></i> Donate
-        </el-button>
       </el-col>
     </el-row>
 
-    <el-row class="version">
-      <el-col :span="12">
-        <el-form-item label="Version">{{info.version}}</el-form-item>
-      </el-col>
-      <el-col :span="12">
-        <el-form-item label="Electron">{{info.electron}}</el-form-item>
-      </el-col>
-    </el-row>
-    <el-row class="version">
-      <el-col :span="12">
-        <el-form-item label="Node">{{info.node}}</el-form-item>
-      </el-col>
-      <el-col :span="12">
-        <el-form-item label="Vue">{{info.vue}}</el-form-item>
-      </el-col>
+    <el-row>
+      <el-form-item label="Version">{{info.version}}</el-form-item>
     </el-row>
 
     <el-row style="padding-top: 20px;">
@@ -41,7 +25,7 @@
         <el-button size="small" round @click="openSite"><i class="fa-solid fa-globe green"></i> Website</el-button>
       </el-col>
       <el-col :span="8">
-        <el-button size="small" round @click="openHelp"><i class="fa-solid fa-circle-question green"></i> Help</el-button>
+        <el-button size="small" round @click="openAPI"><i class="fa-solid fa-circle-question green"></i> API</el-button>
       </el-col>
       <el-col :span="8">
         <el-button size="small" round @click="openGitHub"><i class="fa-brands fa-github green"></i> GitHub</el-button>
@@ -73,11 +57,11 @@
       openSite: function() {
         window.ipcRenderer.send('openUrl', 'https://alteka.solutions/kards/')
       },
-      openHelp: function() {
-        window.ipcRenderer.send('openUrl', 'https://alteka.solutions/kards/help')
+      openAPI: function() {
+        window.ipcRenderer.send('openUrl', 'https://github.com/Alteka/Kards/wiki/REST-API')
       },
       openGitHub: function() {
-        window.ipcRenderer.send('openUrl', 'https://github.com/Alteka/Kards')
+        window.ipcRenderer.send('openUrl', 'https://github.com/morlockdarc/Kards')
       },
       openDonate: function() {
         window.ipcRenderer.send('openUrl', 'https://alteka.solutions/donateKards')

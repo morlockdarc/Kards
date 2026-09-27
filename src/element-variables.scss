@@ -3,7 +3,7 @@ Write your variables here. All available variables can be
 found in element-plus/packages/theme-chalk/src/common/var.scss.
 For example, to overwrite the theme color:
 */
-$--color-primary: #6ab42f;
+$--color-primary: #a6cf39;
 
 @use 'sass:map';
 $--colors: () !default;
@@ -12,10 +12,10 @@ $--colors: map.deep-merge(
     'white': #ffffff,
     'black': #000000,
     'primary': (
-      'base': #6ab42f,
+      'base': #a6cf39,
     ),
     'success': (
-      'base': #6ab42f,
+      'base': #a6cf39,
     ),
     'warning': (
       'base': #e6a23c,
@@ -37,6 +37,10 @@ $--colors: map.deep-merge(
 $--font-path: '~element-plus/lib/theme-chalk/fonts';
 
 @import "~element-plus/packages/theme-chalk/src/index";
+
+a {
+  color: $--color-primary;
+}
 
 
 // @forward '~element-plus/theme-chalk/src/common/var.scss' with (

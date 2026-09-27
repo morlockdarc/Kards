@@ -9,8 +9,8 @@
       <div class="cornerCircles">
         <svg>
           <defs>
-            <circle id="smallCircle" cx="0" cy="0" r="130" :stroke="config.grid.crosshair" stroke-width="2" :fill="config.grid.bg" fill-opacity="0.5" />
-            <circle id="bigCircle" cx="0" cy="0" r="430" :stroke="config.grid.crosshair" stroke-width="2" :fill="config.grid.bg" fill-opacity="0.5" />
+            <circle id="smallCircle" cx="0" cy="0" r="130" :stroke="config.grid.crosshair" stroke-width="2" :fill="config.grid.bg" fill-opacity="0.2" />
+            <circle id="bigCircle" cx="0" cy="0" r="430" :stroke="config.grid.crosshair" stroke-width="2" :fill="config.grid.bg" fill-opacity="0.2" />
           </defs>
         </svg>
         <div class="circleTopLeft">
@@ -112,20 +112,20 @@ import InfoCircle from './InfoCircle'
 }
 
 .circleTopLeft {
-  top: 50px;
-  left: 50px;
+  top: 0px;
+  left: 0px;
 }
 .circleTopRight {
-  top: 50px;
-  right: 50px;
+  top: 0px;
+  right: 0px;
 }
 .circleBottomLeft {
-  bottom: 50px;
-  left: 50px;
+  bottom: 0px;
+  left: 0px;
 }
 .circleBottomRight {
-  bottom: 50px;
-  right: 50px;
+  bottom: 0px;
+  right: 0px;
 }
 
 .centerCircle {
@@ -133,8 +133,8 @@ import InfoCircle from './InfoCircle'
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 80%;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   overflow: hidden;
    /* border: 2px solid red;  */
 }

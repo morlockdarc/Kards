@@ -75,6 +75,7 @@ class restServer extends EventEmitter {
 
     _handleGet(req, res) {
         let url = req.url.split('/')
+        log.info(req.method + ' request received for ' + req.url)
         let c = JSON.parse(JSON.stringify(this.config))
         delete c.alteka.logo
         delete c.audio.textData
